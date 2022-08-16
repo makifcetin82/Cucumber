@@ -40,10 +40,9 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.1</version>
-            <scope>test</scope>
+            <version>6.8.7</version>
+            <scope>compile</scope>
         </dependency>
-
         <!-- Cucumber ile test ng nin bağlantısı cucumber ile aynı versiyon olmalı -->
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
@@ -61,9 +60,12 @@
             <version>5.2.3</version>
         </dependency>
 
-
-
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.21</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
