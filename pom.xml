@@ -9,13 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
-
-
-
 
     <dependencies>  <!--  Bağımlılıklar    -->
 
@@ -33,6 +30,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.5.0</version>
+            <scope>test</scope>
         </dependency>
 
         <!--TestNG için eklendi -->
@@ -43,12 +41,14 @@
             <version>6.8.7</version>
             <scope>compile</scope>
         </dependency>
+
         <!-- Cucumber ile test ng nin bağlantısı cucumber ile aynı versiyon olmalı -->
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>7.5.0</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- WebDriver  -->
@@ -67,8 +67,9 @@
             <scope>test</scope>
         </dependency>
 
-    </dependencies>
 
+
+    </dependencies>
 
 
 
