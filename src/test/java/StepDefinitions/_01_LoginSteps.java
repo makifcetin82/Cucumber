@@ -18,7 +18,7 @@ public class _01_LoginSteps {
     @Given("Navigate to basqar")
     public void navigateToBasqar() {
         GWD.getDriver().get("https://demo.mersys.io/");
-        GWD.getDriver().manage().window().maximize();
+                GWD.getDriver().manage().window().maximize();
     }
 
     @When("Enter username and password and click login button")
@@ -39,5 +39,6 @@ public class _01_LoginSteps {
 //        Assert.assertTrue(dc.dashboard.getText().contains("Dashboard"));
 
         dc.findAndContainsText("dashboard","Dashboard");
+        dc.findAndClick("acceptCookies");
     }
 }

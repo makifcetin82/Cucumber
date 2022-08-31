@@ -1,5 +1,5 @@
-Feature: Country Functionality
-
+Feature:  Country Functionality
+  @SmokeTest @SundayTest
   Scenario: Create Country
     Given Navigate to basqar
     When Enter username and password and click login button
@@ -7,3 +7,4 @@ Feature: Country Functionality
     And Navigate to country page
     When Create a country
     Then Success message should be displayed
+
