@@ -37,7 +37,8 @@ public class Hooks {
             TakesScreenshot screenshot = (TakesScreenshot) GWD.getDriver();
             File ekranDosyasi = screenshot.getScreenshotAs(OutputType.FILE);
 
-            ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
+           //extend rapor ekleniyor extend rapor olmadıgında burası kaldırılmalı
+            //ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
 
 
             try {

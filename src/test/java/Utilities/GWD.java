@@ -30,7 +30,7 @@ public class GWD {
     // threadDriver.set(driver) -> ilgili thread e driver set ediliyor.
 
     public static WebDriver getDriver() {
-        // extend report türkçe bilg çalışmaması sebebiyle kondu
+        // extend report türkçe bilgi çalışmaması sebebiyle kondu
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
 
