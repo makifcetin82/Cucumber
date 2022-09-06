@@ -29,6 +29,9 @@ public class Hooks {
         System.out.println("scenario sonucu="+ scenario.getStatus());
         System.out.println("scenario isFailed ?="+ scenario.isFailed());
 
+        //excele sonuçları yazacağız, path, scenario, browserTipi, zaman
+
+
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
 
@@ -37,9 +40,8 @@ public class Hooks {
             TakesScreenshot screenshot = (TakesScreenshot) GWD.getDriver();
             File ekranDosyasi = screenshot.getScreenshotAs(OutputType.FILE);
 
-           //extend rapor ekleniyor extend rapor olmadıgında burası kaldırılmalı
+            //Extend Reporta ekleniyor  EXTEND report olmadığında burası kaldırılmalı !!! yoksa browserlar KAPANMAZ
             //ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
-
 
             try {
                 FileUtils.copyFile(ekranDosyasi,
@@ -55,9 +57,9 @@ public class Hooks {
         GWD.quitDriver();
     }
 
-
     public String getBase64Screenshot()
     {
-        return ((TakesScreenshot) GWD.getDriver()).getScreenshotAs(OutputType.BASE64);//BU BÖLÜMDE SİTEDEN ALINAN BASE GWD OLARAK DEĞİŞTİRİLDİ
+        return ((TakesScreenshot) GWD.getDriver()).getScreenshotAs(OutputType.BASE64);
     }
+
 }

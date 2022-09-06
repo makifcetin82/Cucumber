@@ -18,10 +18,10 @@ Feature:  Citizenship with scenario Outline
     Then Success message should be displayed
 
     Examples:
-      | CitizenshipName  | ShortName |
-      | Turkey43         | tur1      |
-      | Turkey45          | tur2      |
-      | Turkey47          | tur3      |
-      | Turkey49         | tur4      |
-      | Turkey59          | tur5      |
+      | CitizenshipName | ShortName |
+      | Turkey43        | tur1      |
+      | Turkey45        | tur2      |
+      | Turkey47        | tur3      |
+      | Turkey49        | tur4      |
+      | Turkey59        | tur5      |
 

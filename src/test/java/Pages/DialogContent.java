@@ -129,8 +129,9 @@ public class DialogContent extends Parent{
 
 
 
-         waitUntilLoading();
-
+        // waitUntilLoading();
+    WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+    wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
 
     findAndClick("deleteButton");// silme butonua bas
     findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
