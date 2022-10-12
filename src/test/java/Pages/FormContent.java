@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.xml.xpath.XPath;
-
 public class FormContent extends Parent{
 
     public FormContent() {
@@ -25,8 +23,6 @@ public class FormContent extends Parent{
     @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
     private WebElement gradeLevel2;
 
-
-
     WebElement myElement;
 
     public void findAndClick(String strElement){  // 2.aşama
@@ -41,11 +37,10 @@ public class FormContent extends Parent{
 
         clickFunction(myElement);
 
-        //   if (myElement == academicPeriod || myElement == gradeLevel)
-        //  GWD.Bekle(2);
     }
 
 
 
 
 }
+

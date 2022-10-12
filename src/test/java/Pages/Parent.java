@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class Parent {
 
@@ -29,8 +30,7 @@ public class Parent {
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public void clickFunction(WebElement element)
-    {
+    public void clickFunction(WebElement element) {
         waitUntilClickable(element); // tıklanabilir olana kadar bekle
         scrollToElement(element); // elemente scroll yap
         element.click(); // click yap
@@ -41,15 +41,20 @@ public class Parent {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public void verifyContainsText(WebElement element, String text)
-    {
+    public void verifyContainsText(WebElement element, String text) {
         waitUntilVisible(element); // gözükene kadar bekle
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
 
     public void waitUntilLoading() {
-        WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
     }
 
+
+    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList) {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
+        return elementList;
+    }
 }

@@ -49,12 +49,7 @@ public class _05_DatatableSteps {
 
     @And("User delete item from Dialog")
     public void userDeleteItemFromDialog(DataTable elements) {
-        List<String> listElement = elements.asList(String.class);
 
-        for(int i=0;i<listElement.size();i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
-            dc.SearchAndDelete(listElement.get(i));
-        }
     }
 
     @And("Click on the element in the Form Content")

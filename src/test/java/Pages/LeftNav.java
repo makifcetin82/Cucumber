@@ -5,13 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends Parent {
+public class LeftNav extends Parent{
 
     public LeftNav() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//span[text()='Setup'])[1]")
+    @FindBy(xpath="(//span[text()='Setup'])[1]")
     private WebElement setupOne;
 
     @FindBy(xpath = "//span[text()='Parameters']")
@@ -38,38 +38,25 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
 
-    WebElement myElement;
+    @FindBy (xpath = "(//span[text()='States'])")
+    private WebElement States;
 
-    public void findAndClick(String strElement) {  // 2.aşama
+    WebElement myElement;
+    public void findAndClick(String strElement){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
-        switch (strElement) {
-            case "setupOne":
-                myElement = setupOne;
-                break;
-            case "parameters":
-                myElement = parameters;
-                break;
-            case "countries":
-                myElement = countries;
-                break;
-            case "citizenShip":
-                myElement = citizenShip;
-                break;
-            case "nationalities":
-                myElement = nationalities;
-                break;
-            case "fees":
-                myElement = fees;
-                break;
-            case "entranceExamsOne":
-                myElement = entranceExamsOne;
-                break;
-            case "setupTwo":
-                myElement = setupTwo;
-                break;
-            case "entranceExamsTwo":
-                myElement = entranceExamsTwo;
-                break;
+        switch (strElement)
+        {
+            case "setupOne" : myElement =setupOne; break;
+            case "parameters" : myElement =parameters; break;
+            case "countries" : myElement =countries; break;
+            case "citizenShip" : myElement =citizenShip; break;
+            case "nationalities" : myElement =nationalities; break;
+            case "fees" : myElement =fees; break;
+            case "entranceExamsOne" : myElement =entranceExamsOne; break;
+            case "setupTwo" : myElement =setupTwo; break;
+            case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
+            case "States" : myElement =States; break;
+
         }
 
         clickFunction(myElement);
